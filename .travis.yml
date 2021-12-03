@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build  -f Dockerfile.dev2 .
+  - docker build -t wojmaj/lab8:tagname -f Dockerfile.dev2 .
 
 script:
-  - docker run -e CI=true  npm run test
+  - docker run -e CI=true wojmaj/lab8:tagname npm run test
