@@ -6,6 +6,9 @@ services:
       - CHOKIDAR_USEPOLLING=true
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev3
     ports:
-      - "80:80"
+      - '3000:3000'
+    volumes:
+      - /app/node_modules
+      - .:/app
